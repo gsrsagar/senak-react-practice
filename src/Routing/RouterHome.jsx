@@ -5,6 +5,7 @@ import { Home } from "../Components";
 import { lazy, Suspense, useState } from "react";
 import { Login } from "./Login";
 import Skeletion from "./Skeletion";
+import { ReduxOps } from "../redux-practice/ReduxOperations";
 
 
 
@@ -21,7 +22,7 @@ export function ProtectedRoute(props) {
 
 const AppLayoutContext = lazy(() => import("../ContextAPI"));
 const Courses = lazy(() => import("../Courses"));
-const FormHillingWithEvents = lazy(()=>import('../FormFIlling'))
+const FormHillingWithEvents = lazy(() => import('../FormFIlling'))
 const NotFOund = lazy(() => import("./NotFound"));
 
 export function RoutingExample() {
@@ -50,6 +51,7 @@ export function RoutingExample() {
 
 
                         <Route path="/courses/:id" element={<Courses />} />
+                        <Route path="/redux" element={<ReduxOps />} />
                         <Route path="/courses" element={<Courses />} />
                         <Route path="/forms" element={<FormHillingWithEvents />}></Route>
                         <Route path="*" element={<NotFOund />} />

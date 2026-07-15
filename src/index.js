@@ -17,15 +17,19 @@ import { RoutingExample } from './Routing/RouterHome';
 import { BrowserRouter, HashRouter } from 'react-router-dom';
 import { CookiesProvider } from 'react-cookie';
 import { ControlledForm } from './Forms-API-Calls/ControlledForms';
+import { Provider } from 'react-redux';
+import store from './redux-practice/store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      {/* <CookiesProvider>
+      <Provider store={store}>
+        {/* <CookiesProvider>
        
       </CookiesProvider> */}
-      {/* <ControlledForm /> */}
-       <RoutingExample />
+        {/* <ControlledForm /> */}
+        <RoutingExample />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );

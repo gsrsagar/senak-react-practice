@@ -17,6 +17,7 @@ export function Header() {
                             <NavLink  to= "/contextapi" className="nav-link">Context API</NavLink>
                             <NavLink to= "/courses" className="nav-link" >Courses</NavLink>
                             <NavLink to="/forms" className="nav-link">Forms </NavLink>
+                              <NavLink to="/redux" className="nav-link">Redux </NavLink>
                             <a className="nav-link disabled" aria-disabled="true">Disabled</a>
                         </div>
                     </div>
